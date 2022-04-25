@@ -162,28 +162,6 @@ footer{
 
 /* seccion */
 
-/* .seccion2{
-    width: 80%;
-    margin: 5rem auto;
-}
-.seccion2__container{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-.imageL{
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: 7px 7px 6px #1b2127;
-}
-.contenedorR h2{
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-.contenedorR p{
-    text-align: justify;
-} */
 .cuerpo{
     display: flex;
     height: 100vh;
@@ -208,7 +186,6 @@ footer{
     grid-row: 1/-1;
     background-image: url(img/doctor.png);
     background-size: cover;
-    /* background-position: right top;  */
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     animation: show 2s ease forwards; 
@@ -234,7 +211,6 @@ footer{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }  
-
 
 /* servicios html */
 
