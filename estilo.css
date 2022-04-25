@@ -1,0 +1,691 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F1F1E6;  
+    background-size: cover;
+    background-position: center; 
+}
+
+/* nav */
+
+header{
+    background-color: #364552;
+    width: 100%;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center; 
+} 
+.logo{
+    width: 4%;
+}
+.logo img{
+    width: 100%;
+    margin: 1.5rem;
+} 
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 2.5rem;
+}
+.nav ul li{
+    font-size: 1.2rem;
+    font-weight: 600;
+    animation-name: mover;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+    @keyframes mover{
+        0%{
+            text-shadow: 4px 4px 6px #000;
+        }
+        50%{
+            transform: translateX(100px);
+        }
+    }
+
+.nav a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.nav a:hover{
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 3);
+    color: #ffffffd7;
+} 
+
+/* seccion */
+
+.seccion{
+    width: 80%;
+    margin: 1rem auto;
+}
+.seccion__title{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    /* text-decoration: underline #000; */
+    color: #364552;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-shadow: 5px 5px 10px #1b2127;
+    animation-duration: 1.4s;
+    animation-name: aparecer;
+    animation-delay: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+} 
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+} 
+.seccion article img{
+    width: 400px;
+    height: 400px;
+    border: solid 2px #364552;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 3); 
+}  
+.seccion__text{
+    color: #364552;
+    text-align: justify;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}  
+footer{
+    background-color: #364552; 
+    padding: 3rem;
+    color: #fff;
+    font-size: 10px;
+}   
+
+
+/* quien soy html */
+
+
+/* nav */
+
+.logo{
+    width: 4%;
+}
+.logo img{
+    width: 100%;
+    margin: 1.5rem;
+}
+.nav2 ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 2.5rem;
+}
+.nav2 ul li{
+    font-size: 1.2rem;
+    font-weight: 600;
+    animation-name: mover;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+    @keyframes mover{
+        0%{
+            text-shadow: 4px 4px 6px #000;
+        }
+        50%{
+            transform: translateX(100px);
+        }
+    }
+
+.nav2 a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.nav2 a:hover{
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 3);
+    color: #ffffffd7;
+}
+
+/* seccion */
+
+/* .seccion2{
+    width: 80%;
+    margin: 5rem auto;
+}
+.seccion2__container{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.imageL{
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 7px 7px 6px #1b2127;
+}
+.contenedorR h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.contenedorR p{
+    text-align: justify;
+} */
+.cuerpo{
+    display: flex;
+    height: 100vh;
+}
+
+.grid{
+    background-color: #fff;
+    height: 90vh;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 0 30px -10px rgba(138, 135, 135, 1);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    overflow: hidden;
+}
+
+.grid::before{
+    content: ""; 
+    grid-column: 4/-1;
+    grid-row: 1/-1;
+    background-image: url(img/doctor.png);
+    background-size: cover;
+    /* background-position: right top;  */
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    animation: show 2s ease forwards; 
+} 
+
+.grid__text{
+    grid-row: 2/-2;
+    grid-column: 2/6;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    animation: show 3s 1.3s ease forwards;
+}
+
+.grid__title{
+    font-size: 5rem;
+}
+
+@keyframes show{
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}  
+
+
+/* servicios html */
+
+
+/* nav */
+
+.logo{
+    width: 4%;
+}
+.logo img{
+    width: 100%;
+    margin: 1.5rem;
+} 
+.nav3 ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 2.5rem; 
+}
+.nav3 ul li{
+    font-size: 1.2rem;
+    font-weight: 600;
+    animation-name: mover;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+    @keyframes mover{
+        0%{
+            text-shadow: 4px 4px 6px #000;
+        }
+        50%{
+            transform: translateX(100px);
+        }
+    }
+
+.nav3 a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.nav3 a:hover{
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 3);
+    color: #ffffffd7;
+}
+
+/* seccion */
+
+.servicios{
+    min-height: 600px;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    padding: 15px;
+}
+
+.imgS{
+    border: solid 2px #7B4F52;
+    border-radius: 10px;
+    transition: all 0.7s;
+}
+.imgS:hover{
+    transform: scale(1.03);
+    transition: all 1s;
+    box-shadow: 1px 1px 6px #000,
+                1px 1px 5px #000;
+}
+
+.img1{
+    background-image: url(img/foto2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.img2{
+    background-image: url(img/foto3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.img3{
+    background-image: url(img/foto4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img4{
+    background-image: url(img/foto5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgS__title{
+    text-align: center;
+    color: #2B6B7B;
+}
+.imgS__text{
+    text-align: justify;
+    font-weight: 600;
+}
+
+
+/* contacto html */
+
+
+/* nav */
+
+.logo{
+    width: 4%;
+}
+.logo img{
+    width: 100%;
+    margin: 1.5rem;
+}
+.nav4 ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 2.5rem;
+}
+.nav4 ul li{
+    font-size: 1.2rem;
+    font-weight: 600;
+    animation-name: mover;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+    @keyframes mover{
+        0%{
+            text-shadow: 4px 4px 6px #000;
+        }
+        50%{
+            transform: translateX(100px);
+        }
+    }
+
+.nav4 a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.nav4 a:hover{
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 3);
+    color: #ffffffd7;
+}
+
+/* formulario */
+
+.formConteiner{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #444;
+    margin: 80px 80px;
+    border-radius: 1rem;
+}
+.form{
+    width: 400px; 
+    padding: 30px;
+    order: 5;
+}
+.form__input{
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 3px solid #56d6d6;
+    background: transparent;
+    color: #fff;
+}
+.form__input:focus{
+    background: linear-gradient(to bottom, transparent, #333);
+    outline: none;
+    border-bottom: 3px solid #00ffff;
+}
+.form textarea{
+    height: 120px;
+    resize: none;
+}
+.form-img{
+    padding: 10px;
+    order: 2;
+}
+.form-img img{
+    width: 500px;
+    border-radius: 3rem;
+}
+.form input[type="submit"] {
+    background-color: #5dd;
+    cursor: pointer;
+    border-bottom: none;
+}
+.form input[type="submit"]:hover{
+    background-color: #43a3a3;
+}
+
+
+/* index responsive */
+
+
+@media only screen and (min-width:320px) and (max-width:599px) {
+    .nav ul li{
+        font-size: 10px;
+    } 
+    .seccion{
+        width: 80%;
+        margin: 1rem auto;
+    }
+    .seccion__title{
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+    } 
+    .img{
+        display: flex;
+        justify-content: center;
+    }
+    .seccion article img{
+        width: 150px;
+        height: 150px;
+        border: solid 1px #364552;
+        border-radius: 1rem;
+    }  
+    .seccion__text{
+        font-size: 10px;
+        text-align: justify;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    footer{
+        padding: 2rem;
+    }
+    footer h2{
+        font-size: 10px;
+    }  
+}  
+
+
+@media only screen and (min-width:600px) and (max-width:768px){
+    .seccion article img{
+        width: 300px;
+        height: 300px;
+    }
+    .logo img{
+        width: 40px;
+        height: 40px;
+        margin-top: 2rem;
+    }
+    .seccion__text{
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width:1200px) {
+    .logo img{
+        width: 45px;
+        height: 45px;
+        margin-top: 1.8rem;
+    }
+    .seccion__text{
+        margin-top: 1rem;
+    }
+} 
+
+
+/* quien soy responsive */
+
+
+@media only screen and (min-width:320px) and (max-width:479px) {
+    .nav2 ul li{
+        font-size: 10px;
+    }
+    .grid::before{
+        grid-column: 1/-1;
+        background-position: center;
+    }
+    .grid__title{
+        font-size: 1.5rem;
+    }
+    .grid__p{
+        font-size: 12px;
+    }
+} 
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .grid::before{
+        grid-column: 1/-1;
+        background-position: center;
+    }
+    .grid__title{
+        font-size: 2rem;
+    }
+    .grid__p{
+        font-size: 1rem;
+    }
+} 
+
+
+
+
+/* servicios responsive */
+
+
+@media only screen and (min-width:320px) and (max-width:479px) {
+    .nav3 ul li{
+        font-size: 10px;
+    }
+    .servicios{
+        grid-template-rows: repeat(4, 250px);
+    }
+}
+
+@media only screen and (min-width:480px) {
+    header{
+        margin-bottom: 1rem;
+    }
+    .nav3 ul li{
+        font-size: 1rem;
+    }
+    .logo img{
+        width: 35px;
+        height: 35px;
+        margin-top: 2rem;
+    }
+    .servicios{
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 10px; */
+    }
+    footer{
+        margin-block-start: 1rem;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .img1{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .img2{
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+    .img3{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .img4{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }  
+
+}
+
+@media only screen and (min-width:768px) {
+    .nav3 ul li{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .logo img{
+        width: 45px;
+        height: 45px;
+        margin-top: 1.8rem;
+    }
+    .servicios{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .img1{
+        grid-column: 1/3;
+        grid-row: 1/3;
+        background-image: url(img/foto2.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .img2{
+        grid-column: 3/4;
+        grid-row: 1/3;
+        background-image: url(img/foto3.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .img3{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background-image: url(img/foto4.jpg);
+        background-size: cover;
+        background-position: center;
+    }.img4{
+        grid-column: 2/4;
+        grid-row: 3/4;
+        background-image: url(img/foto5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+/* contacto responsive */
+
+
+@media only screen and (min-width:320px) and (max-width:599px) {
+    .nav4 ul li{
+        font-size: 10px;
+    }
+    .formConteiner{
+        height: 500px;
+        margin: 1rem;
+    }
+    .form{
+        padding: 0;
+    }
+    .form-img img{
+        width: 200px;
+    }
+    .form__section{
+        width: 50%;
+        margin: 8px auto;
+    }
+    .enviar{
+        width: 150px;
+        margin: 0  auto;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:900px) {
+    .formConteiner{
+        margin: 2rem;
+        flex-wrap: nowrap;
+    }
+    .form-img img{
+        width: 230px;
+    }
+    .form__section{
+        width: 70%;
+        margin: 8px auto;
+    }
+    .form__input{
+        margin:  auto;
+    }
+    .enviar{
+        width: 160px;
+        margin: 0  auto;
+    }
+}
+
+@media only screen and (min-width:900px) and (max-width:1200px) {
+    .formConteiner{
+        flex-wrap: nowrap;
+    }
+    .form-img img{
+        width: 350px;
+    }
+}
