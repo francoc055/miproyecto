@@ -108,7 +108,7 @@ header{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }  
-footer{
+.footer-ind{
     background-color: #364552; 
     padding: 3rem;
     color: #fff;
@@ -211,6 +211,13 @@ footer{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }  
+
+footer{
+    background-color: #364552; 
+    padding: 3rem;
+    color: #fff;
+    font-size: 10px;
+}   
 
 /* servicios html */
 
@@ -441,14 +448,14 @@ footer{
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-    footer{
+    .footer-ind{
         padding: 2rem;
         position: absolute;
         bottom: 0;
         right: 0;
         left: 0;
     }
-    footer h2{
+    .footer-ind h2{
         font-size: 10px;
     }  
 }  
