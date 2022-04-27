@@ -298,17 +298,23 @@ footer h2{
         border: solid 1px #364552;
         border-radius: 1rem;
         }
-        /* footer{
-        padding: 2rem;
-        }*/
+        .slide{
+            margin-top: 12rem;
+        }
+        footer{
+            padding: 2rem;
+            position: absolute;
+            bottom: 0;
+
+        }
 } 
 
 /* quien soy responsive */
 
 
 @media only screen and (min-width:320px) and (max-width:479px) {
-    .nav2 ul li{
-        font-size: 10px;
+    .grid{
+        height: 70vh;
     }
     .grid::before{
         grid-column: 1/-1;
