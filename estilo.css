@@ -42,30 +42,34 @@ nav img{
 
 .seccion{
     width: 80%;
-    margin: 1rem auto;
-}
-.seccion__title{
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-    margin-top: 4rem;
-    color: #364552;
+    margin: 5rem auto;
     text-align: center;
-    letter-spacing: 0.2rem;
-    text-shadow: 5px 5px 10px #1b2127;
-    animation-duration: 1.4s;
-    animation-name: aparecer;
-    animation-delay: 3s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-} 
-@keyframes aparecer{
-    0%{
-        opacity: 0;
+}
+/* titulo animacion inicia */
+.m-escribir{
+    position: relative;
+    font-size: 2rem;
+    color: #364552;
+    text-transform: uppercase;
+}
+.m-escribir::after{
+    content: "";
+    border-left: 2px solid #364552;
+    background-color: #F1F1E6;
+    right: 0;
+    height: 104%;
+    position: absolute;
+    animation: text 2.5s infinite alternate steps(31);
+}
+@keyframes text{
+    from{
+        width: 100%;
     }
-    100%{
-        opacity: 1;
+    to{
+        width: 0;
     }
 }
+/* titulo animacion termina */
 
 .img{
     display: flex;
@@ -77,6 +81,7 @@ nav img{
     border: solid 2px #364552;
     border-radius: 1rem;
     box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 3); 
+    margin-top: 1rem;
 }  
 .seccion__text{
     color: #364552;
@@ -87,13 +92,18 @@ nav img{
 }  
 
 footer{
+    height: 150px;
+    width: 100%;
     background-color: #364552; 
-    padding: 3rem;
     color: #fff;
-    font-size: 10px;
+    text-align: center;
 }
-footer h2{
-    font-size: 1rem;
+footer p{
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+footer i{
+    font-size: 2rem;
 }
 
 
@@ -292,6 +302,13 @@ footer h2{
 
 
 @media only screen and (min-width:320px) and (max-width:599px) {
+        nav img{
+            width: 8%;
+        }
+        .m-escribir{
+            font-size: 1rem;
+        }
+
         .seccion article img{
         width: 200px;
         height: 200px;
@@ -301,13 +318,27 @@ footer h2{
         .slide{
             margin-top: 12rem;
         }
-        footer{
-            padding: 2rem;
-            position: absolute;
-            bottom: 0;
-
+        footer p{
+            font-size: 1rem;
+            padding: 10px;
+        }
+        footer i{
+            font-size: 1.5rem;
         }
 } 
+
+@media only screen and (min-width:600px) and (max-width:899px) {
+    .seccion{
+        margin: 7rem auto;
+    }
+    nav img{
+        width: 10%;
+    }
+    .m-escribir{
+        font-size: 1.6rem;
+    }
+}
+
 
 /* quien soy responsive */
 
@@ -340,6 +371,14 @@ footer h2{
         font-size: 1rem;
     }
 } 
+
+/* servicios responsive */
+
+@media only screen and (min-width:320px) and (max-width:600px) {
+    .slide{
+        margin-bottom: 8rem;
+    }
+}
 
 
 /* contacto responsive */
