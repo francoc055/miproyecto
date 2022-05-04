@@ -1,3 +1,8 @@
+// variables 
+$color-primario:#364552;
+$color-body:#F1F1E6;
+
+
 html{
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
@@ -8,7 +13,7 @@ html{
     box-sizing: border-box;
 }
 body{
-    background-color: #F1F1E6;  
+    background-color: $color-body;  
     background-size: cover;
     background-position: center; 
 }
@@ -19,7 +24,7 @@ body{
 .center{
     text-align: center;
     background-color: none;
-    background-color: #364552;
+    background-color: $color-primario;
     li{
         list-style: none;
         padding: 5px;
@@ -82,7 +87,7 @@ nav img{
 .m-escribir{
     position: relative;
     font-size: 2rem;
-    color: #364552;
+    color: $color-primario;
     text-transform: uppercase;
 }
 .m-escribir::after{
@@ -117,7 +122,7 @@ nav img{
 //     margin-top: 1rem;
 // }  
 .seccion__text{
-    color: #364552;
+    color: $color-primario;
     text-align: justify;
     font-size: 1.2rem;
     margin-top: 2rem;
