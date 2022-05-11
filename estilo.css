@@ -58,9 +58,20 @@ body {
   font-size: 1.3rem;
 }
 
-.center li a:hover {
-  color: rgba(255, 255, 255, 0.753);
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.753);
+.btn--a1:hover {
+  color: #000000;
+}
+
+.btn--a2:hover {
+  color: #1e2022;
+}
+
+.btn--a3:hover {
+  color: #272b2e;
+}
+
+.btn--a4:hover {
+  color: #32363b;
 }
 
 nav img {
@@ -147,13 +158,9 @@ footer {
   text-align: center;
 }
 
-footer p {
-  font-size: 1.3rem;
+footer p, footer i {
+  font-size: 1.5rem;
   padding: 1rem;
-}
-
-footer i {
-  font-size: 2rem;
 }
 
 /* quien soy html */
@@ -237,57 +244,6 @@ footer i {
 
 /* servicios html */
 /* seccion */
-/* .servicios{
-    min-height: 600px;
-    width: 100%;
-    display: grid;
-    gap: 20px;
-    padding: 15px;
-}
-
-.imgS{
-    border: solid 2px #7B4F52;
-    border-radius: 10px;
-    transition: all 0.7s;
-}
-.imgS:hover{
-    transform: scale(1.03);
-    transition: all 1s;
-    box-shadow: 1px 1px 6px #000,
-                1px 1px 5px #000;
-}
-
-.img1{
-    background-image: url(img/foto2.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.img2{
-    background-image: url(img/foto3.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.img3{
-    background-image: url(img/foto4.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.img4{
-    background-image: url(img/foto5.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.imgS__title{
-    text-align: center;
-    color: #2B6B7B;
-}
-.imgS__text{
-    text-align: justify;
-    font-weight: 600;
-} */
 .slide {
   width: 80%;
   margin: 1rem auto;
@@ -301,16 +257,15 @@ footer i {
   max-height: 600px;
 }
 
-.carousel-caption h5 {
+.carousel-caption h3 {
   color: #3b3a3a;
 }
 
-.carousel-caption p {
+.carousel-caption p, .carousel-caption footer i, footer .carousel-caption i {
   color: #000;
 }
 
 /* contacto html */
-/* nav */
 /* formulario */
 .formConteiner {
   height: 600px;
@@ -399,7 +354,7 @@ footer i {
   .slide {
     margin-top: 12rem;
   }
-  footer p {
+  footer p, footer i {
     font-size: 1rem;
     padding: 10px;
   }
@@ -424,6 +379,7 @@ footer i {
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .grid {
     height: 70vh;
+    margin: 6.5rem auto;
   }
   .grid::before {
     grid-column: 1/-1;

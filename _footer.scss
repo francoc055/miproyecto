@@ -5,10 +5,11 @@ footer{
     color: #fff;
     text-align: center;
     p{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         padding: 1rem;
     }
+    // extend
     i{
-        font-size: 2rem;
+        @extend p;
     }
 }
