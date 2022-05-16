@@ -1,0 +1,19 @@
+.center{
+    text-align: center;
+    background-color: none;
+    background-color: $color-primario;
+    li{
+        list-style: none;
+        padding: 5px;
+        animation: desplazar 1s ease;
+    }
+    @keyframes desplazar {
+        from{transform: translateX(1000px);}
+        to{transform: translateX(0);}
+    }
+    li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.3rem;
+    }
+}

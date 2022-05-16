@@ -19,29 +19,7 @@ body{
 }
 
 /* nav */
-.center{
-    text-align: center;
-    background-color: none;
-    background-color: $color-primario;
-    li{
-        list-style: none;
-        padding: 5px;
-        animation: desplazar 1s ease;
-    }
-    @keyframes desplazar {
-        from{transform: translateX(1000px);}
-        to{transform: translateX(0);}
-    }
-    li a{
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.3rem;
-    }
-    // li a:hover{
-    //     color: rgba(255, 255, 255, 0.753);
-    //     text-shadow: 2px 2px 7px #5d81a0;
-    // }
-}
+@import "_nav";
 // map start
 $li: (
     a1: #000000,
@@ -124,21 +102,34 @@ nav img{
 .cuerpo{
     display: flex;
     height: 100vh;
+    .grid{
+        background-color: #fff;
+        height: 80vh;
+        width: 90%;
+        margin: 5rem auto;
+        box-shadow: 0 0 30px -10px rgba(138, 135, 135, 1);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        overflow: hidden;
+    }
+    .grid__text{
+        grid-row: 2/-2;
+        grid-column: 2/6;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        animation: show 3s 1.3s ease forwards;
+        @keyframes show{
+            to{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }  
+    }
 }
-
-.grid{
-    background-color: #fff;
-    height: 80vh;
-    width: 90%;
-    margin: 5rem auto;
-    box-shadow: 0 0 30px -10px rgba(138, 135, 135, 1);
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    overflow: hidden;
-}
-
 .grid::before{
     content: ""; 
     grid-column: 4/-1;
@@ -149,27 +140,9 @@ nav img{
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     animation: show 2s ease forwards; 
 } 
-
-.grid__text{
-    grid-row: 2/-2;
-    grid-column: 2/6;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    animation: show 3s 1.3s ease forwards;
-}
-
 .grid__title{
     font-size: 5rem;
 }
-
-@keyframes show{
-    to{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-}  
 
 /* servicios html */
 /* seccion */
@@ -179,16 +152,18 @@ nav img{
     border: #36455236 solid 10px;
     border-radius: 1.6rem;
     margin-top: 5rem;
+    .d-block{
+        border-radius: 1rem;
+        max-height: 600px;
+    }
 }
-.d-block{
-    border-radius: 1rem;
-    max-height: 600px;
-}
-.carousel-caption h3{
+.carousel-caption{
+    h3{
     color: #3b3a3a;
-}
-.carousel-caption p{
-    color: #000;
+    }
+    p{
+        color: #000;
+    }
 }
 
 /* contacto html */
@@ -202,173 +177,180 @@ nav img{
     background: #444;
     margin: 80px 80px;
     border-radius: 1rem;
-}
-.form{
-    width: 400px; 
-    padding: 30px;
-    order: 5;
-}
-.form__input{
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    border: none;
-    border-bottom: 3px solid #56d6d6;
-    background: transparent;
-    color: #fff;
-}
-.form__input:focus{
-    background: linear-gradient(to bottom, transparent, #333);
-    outline: none;
-    border-bottom: 3px solid #00ffff;
-}
-.form textarea{
-    height: 120px;
-    resize: none;
-}
-.form-img{
-    padding: 10px;
-    order: 2;
-}
-.form-img img{
-    width: 500px;
-    border-radius: 3rem;
-}
-.form input[type="submit"] {
-    background-color: #5dd;
-    cursor: pointer;
-    border-bottom: none;
-}
-.form input[type="submit"]:hover{
-    background-color: #43a3a3;
+    .form{
+        width: 400px; 
+        padding: 30px;
+        order: 5;
+        input[type="submit"] {
+            background-color: #5dd;
+            cursor: pointer;
+            border-bottom: none;
+        }
+        input[type="submit"]:hover{
+            background-color: #43a3a3;
+        }
+    }
+    .form__input{
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 3px solid #56d6d6;
+        background: transparent;
+        color: #fff;
+    }
+    .form__input:focus{
+        background: linear-gradient(to bottom, transparent, #333);
+        outline: none;
+        border-bottom: 3px solid #00ffff;
+    }
+    textarea{
+        height: 120px;
+        resize: none;
+    }
+    .form-img{
+        padding: 10px;
+        order: 2;
+        img{
+            width: 500px;
+            border-radius: 3rem;
+        }
+    }
 }
 
 /* index responsive */
 @media only screen and (min-width:320px) and (max-width:599px) {
-        nav img{
-            width: 8%;
-        }
-        .m-escribir{
-            font-size: 1rem;
-        }
-
-        .seccion article img{
+nav img{
+    width: 8%;
+}
+.seccion article {
+    .m-escribir{
+        font-size: 1rem;
+    }
+    img{
         width: 200px;
         height: 200px;
         border: solid 1px #364552;
         border-radius: 1rem;
         }
-        .slide{
-            margin-top: 12rem;
+    }
+    footer{
+        p{
+        font-size: 1rem;
+        padding: 10px;
         }
-        footer p{
-            font-size: 1rem;
-            padding: 10px;
-        }
-        footer i{
+        i{
             font-size: 1.5rem;
         }
+    }
 } 
 @media only screen and (min-width:600px) and (max-width:899px) {
-    .seccion{
-        margin: 7rem auto;
-    }
-    nav img{
-        width: 10%;
-    }
+nav img{
+    width: 10%;
+}
+.seccion{
+    margin: 7rem auto;
     .m-escribir{
         font-size: 1.6rem;
     }
 }
+.m-escribir{
+    font-size: 1.6rem;
+}
+}
 
 /* quien soy responsive */
 @media only screen and (min-width:320px) and (max-width:479px) {
-    .grid{
-        height: 70vh;
-        margin: 6.5rem auto;
-    }
-    .grid::before{
-        grid-column: 1/-1;
-        background-position: center;
-    }
-    .grid__title{
-        font-size: 1.5rem;
-    }
-    .grid__p{
-        font-size: 12px;
-    }
+.grid{
+    height: 70vh;
+    margin: 6.5rem auto;
+}
+.grid::before{
+    grid-column: 1/-1;
+    background-position: center;
+}
+.grid__title{
+    font-size: 1.5rem;
+}
+.grid__p{
+    font-size: 12px;
+}
 } 
 @media only screen and (min-width:480px) and (max-width:767px) {
-    .grid::before{
-        grid-column: 1/-1;
-        background-position: center;
-    }
-    .grid__title{
-        font-size: 2rem;
-    }
-    .grid__p{
-        font-size: 1rem;
-    }
+.grid::before{
+    grid-column: 1/-1;
+    background-position: center;
+}
+.grid__title{
+    font-size: 2rem;
+}
+.grid__p{
+    font-size: 1rem;
+}
 } 
 
 /* servicios responsive */
-@media only screen and (min-width:320px) and (max-width:600px) {
-    .slide{
-        margin-bottom: 8rem;
-    }
+@media only screen and (min-width:320px) and (max-width:900px) {
+.slide{
+    margin-bottom: 5rem;
+    margin-top: 7rem;
+}
 }
 
 /* contacto responsive */
 @media only screen and (min-width:320px) and (max-width:599px) {
-    .formConteiner{
-        height: 500px;
-        margin: 1rem;
-        margin-top: 4rem;
-    }
+.formConteiner{
+    height: 500px;
+    margin: 1rem;
+    margin-top: 4rem;
     .form{
         padding: 0;
-    }
-    .form__input{
-        height: 30px;
+        .form__section{
+            width: 50%;
+            margin: 8px auto;
+            .form__input{
+                height: 30px;
+            }
+        }
+        .enviar{
+            width: 100px;
+            margin: 0  auto;
+        }
     }
     .form-img img{
         width: 200px;
     }
-    .form__section{
-        width: 50%;
-        margin: 8px auto;
-    }
-    .enviar{
-        width: 100px;
-        margin: 0  auto;
-    }
+}
 }
 @media only screen and (min-width:600px) and (max-width:900px) {
-    .formConteiner{
-        margin: 2rem;
-        flex-wrap: nowrap;
-        margin-top: 4rem;
+.formConteiner{
+    margin: 2rem;
+    flex-wrap: nowrap;
+    margin-top: 6.5rem;
+    .form{
+        padding: 0;
+        .form__section{
+            width: 70%;
+            margin: 8px auto;
+            .form__input{
+                margin:  auto;
+            }
+        }
+        .enviar{
+            width: 205px;
+            margin: 0  auto;
+        }
     }
     .form-img img{
         width: 230px;
     }
-    .form__section{
-        width: 70%;
-        margin: 8px auto;
-    }
-    .form__input{
-        margin:  auto;
-    }
-    .enviar{
-        width: 160px;
-        margin: 0  auto;
-    }
+}
 }
 @media only screen and (min-width:900px) and (max-width:1200px) {
-    .formConteiner{
-        flex-wrap: nowrap;
-    }
+.formConteiner{
+    flex-wrap: nowrap;
     .form-img img{
         width: 350px;
     }
+}
 }
