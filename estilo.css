@@ -374,6 +374,14 @@ footer i {
   border-radius: 3rem;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .navbar-nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 /* index responsive */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .navbar-brand img {

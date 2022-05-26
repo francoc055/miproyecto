@@ -217,6 +217,12 @@ body{
         }
     }
 }
+// navbar
+@media only screen and (min-width:320px) and (max-width:768px) {
+    .navbar-nav{
+        align-items: center;
+    }
+}
 
 /* index responsive */
 @media only screen and (min-width:320px) and (max-width:480px) {
