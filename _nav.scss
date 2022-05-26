@@ -1,19 +1,21 @@
-.center{
-    text-align: center;
-    background-color: none;
-    background-color: $color-primario;
-    li{
-        list-style: none;
-        padding: 5px;
-        animation: desplazar 1s ease;
-    }
-    @keyframes desplazar {
-        from{transform: translateX(1000px);}
-        to{transform: translateX(0);}
-    }
-    li a{
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.3rem;
-    }
+.backg{
+    background-color: #ffffff;
+}
+.navbar-brand img{
+    width: 6%;
+}
+.nav-item{
+    padding: 1rem;
+}
+.nav-item a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #444444;
+    transition: all .4s;
+    text-transform: uppercase;
+}
+.nav-item a:hover{
+    transition: all .4s;
+    text-shadow: 4px 4px 10px #000;
+    color: #05F2DB;
 }

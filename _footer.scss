@@ -1,15 +1,14 @@
 footer{
-    height: 150px;
+    height: 140px;
     width: 100%;
-    background-color: #364552; 
+    background-color: #545454; 
     color: #fff;
     text-align: center;
     p{
         font-size: 1.5rem;
         padding: 1rem;
     }
-    // extend
     i{
-        @extend p;
+        font-size: 1.5rem;
     }
 }
